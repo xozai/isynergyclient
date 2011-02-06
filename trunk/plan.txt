@@ -1,0 +1,63 @@
+Synergy Client
+
+http://www.wireshark.org/docs/dfref/s/synergy.html
+http://en.wikipedia.org/wiki/Synergy_(software)#Network_communications
+
+port 24800
+server listens
+clients opens connection
+server sends kMsgHello
+clients sends kMsgHelloBack
+server sends kMsgQInfo
+client sends kMsgDInfo
+
+both server and client send kMsgCKeepAlive
+
+kMsgDMouseMove
+...
+kMsgCEnter, kMsgCLeave
+
+kMsgCClipboard?
+
+ProtocolTypes.cpp
+
+DONE:
+ * make app do background
+ * add Activator support code from BTstack Mouse
+ * get initial screen size
+ * check re-use of cells in table view, buggy on iPhone
+ * show & handle DONE button for keyboard
+ * implement CTRL+Click  = Right Click feature
+ * implement Shift+Click = Middle Click feature
+ * ignore SIGPIPE on write
+ * setup theos build for it
+ * add/create icons
+ * create Activator event plists
+ * set default for mouse buttons
+ * unify Status & Activation
+ * make it not crash
+ * fix packaging with theos
+ * add flags for iPad full screen
+ * get it to work with QuickSynergy (crash)
+ * (make Right click work always) seems to work now
+ * disable textfields while connected
+ * handle connection error
+   * fix dead end in state machine
+   * show activator while connecting (in status label)
+   * show error
+ * create rounded icons
+
+BEFORE RELEASE 0.8:
+ * send periodic alive messages
+  
+BEFORE RELEASE 0.9:
+ * make drag tableview not stall
+ * implement periodic check for connection alive/re-connnect
+ * nice idea: "compress" mouse movement if more data follows
+   * could be done by MouseSupport/hid-support and/or BTstack Mouse
+
+LATER:
+ * implement Keyboard support
+   * test if exists
+   * inject data using hid-support
+ * keycodes or chars?
