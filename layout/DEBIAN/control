@@ -1,0 +1,18 @@
+Package: ch.ringwald.synergyclient
+Version: 0.8
+Name: BTstack SynergyClient
+Description: Client for Synergy Remote Control
+ Synergy+ lets you easily share a single mouse and
+ keyboard between multiple computers with different
+ operating systems, without special hardware.
+ BTstack SynergyClient provides an independent client
+ of the Synergy protocol for the iOS. In this
+ implementation, middle and right mouse buttons can
+ be assigned using Activator.
+ More info on Synergy+ http://http://code.google.com/p/synergy-plus/
+Section: Networking
+Architecture: iphoneos-arm
+Homepage: http://btstack.googlecode.com
+Depends: jp.ashikase.mousesupport (>= svn.r115-1), libactivator (>= 1.3.2)
+Maintainer: Matthias Ringwald <iphone@ringwald.ch>
+Author: Matthias Ringwald <iphone@ringwald.ch>
